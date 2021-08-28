@@ -15,6 +15,10 @@ namespace CalculatorConsoleApp
 
             var myCalculator = new Calculator(value1, value2, operation);
 
+            
+            Console.WriteLine(" Console Calculator App");
+            Console.WriteLine("************************\n");
+
             do
             {
                 value1 = myCalculator.askForNumber(value1, "first");
@@ -22,7 +26,7 @@ namespace CalculatorConsoleApp
                 value2 = myCalculator.askForNumber(value2, "second");
 
                 Console.Write("\nEnter an arthimatic operation \n[Add(+), Subtract(-), Multiply(*) or Divide(/)] : ");
-                operation = (Console.ReadLine()).ToLower();  //has logical error, reads all string as operator
+                operation = myCalculator.oper();
 
                 try
                 {

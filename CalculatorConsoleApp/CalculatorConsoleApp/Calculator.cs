@@ -71,6 +71,22 @@ namespace CalculatorConsoleApp
         {
             return ((next == "Y" || next == "YES") ? true : false);
         }
+        public string oper()
+        {
+            string op;
+            Console.Write("Enter an operator : ");
+            //char op = Convert.ToChar(Console.ReadLine());
+            op = Console.ReadLine();
+
+
+            if (op == "+" || op == "-" || op == "*" || op == "/")
+                return op;
+            else
+            {
+                Console.Write($"\n\"{op}\" is an invalid arithmatic operator.\nPlease ");
+                return oper();
+            }
+        }
     }
 }
 
@@ -105,22 +121,8 @@ namespace CalculatorConsoleApp
             }
             return result;
         }*/
-/* public string oper()
-         {
-             string op;
-             Console.Write("Enter an operator : ");
-             //char op = Convert.ToChar(Console.ReadLine());
-             op = Console.ReadLine();
-
-             /*if (op == '+' || op == '-' || op == '*' || op == '/')
-             if (op == "+" || op == "-" || op == "*" || op == "/")
-                 return op;
-             else
-             {
-                 Console.WriteLine($"\nInvalid operator.{op}");
-                 oper();
-             }
-             switch (op) 
+ 
+            /* switch (op) 
              {
                  case "+":
                  case "-":
